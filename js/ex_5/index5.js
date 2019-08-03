@@ -1,0 +1,10 @@
+var firstName = "shucheng";
+var lastName = "Gu";
+var age = 27;
+var address = "CMU";
+var dateOfBirth = "03/27/1992";
+console.log(firstName);
+console.log(lastName);
+console.log(age);
+console.log(address);
+console.log(dateOfBirth);
