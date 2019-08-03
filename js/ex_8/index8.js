@@ -1,0 +1,10 @@
+const firstName = "shucheng";
+const lastName = "Gu";
+const age = 27;
+const address = "CMU";
+const dateOfBirth = "03/27/1992";
+console.log("First Name:", firstName);
+console.log("Last Name:", lastName);
+console.log("Age:", age);
+console.log("Address", address);
+console.log("Date of birth:", dateOfBirth);
