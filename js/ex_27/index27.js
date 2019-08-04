@@ -1,0 +1,10 @@
+let firstNumber = 2;
+let secondNumber = 4;
+let addtion = firstNumber + secondNumber;
+let substraction = firstNumber - secondNumber;
+let multiplication = firstNumber * secondNumber;
+let division = firstNumber / secondNumber;
+let remainder = firstNumber % secondNumber;
+console.log(addtion);
+console.log(remainder);
+console.log(division);
