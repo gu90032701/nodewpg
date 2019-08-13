@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <title>Create User</title>
+</head>
+  <body>
+    <h1>Create User</h1>
+    <hr />
+    <form
+      action="create_user.html"
+      method="get"
+      enctype="application/x-www-form-urlencoded"
+    >
+    <fieldset>
+        <legend>User Form</legend>
+      <label>username <input type="text" name="username" placeholder="username" size: 30
+      maxlength: 12 required  pattern="^[a-zA-Z]+$"  title="Input only letters">
+     
+    </fieldset>
+    <label>password</label><input type="password" name="password" placeholder="password" size: 30
+      maxlength: 8 required="required" pattern="\d+" title="Input only numbers">
+      <input type="submit" value="Submit this form">
+      
+</form>
+
+      <hr>
+      <form
+      action="create_user.html"
+      method="get"
+      enctype="application/x-www-form-urlencoded"
+    >
+      <label>Select your favourite superheros</label>
+  <input type="radio" name="superheros" value="false"> Superman
+  <input type="radio" name="superheros" value="false" checked="checked"> Batman
+  <input type="radio" name="superheros" value="false"> Wonder Woman
+  <input type="radio" name="superheros" value="false"> Flash
+  <input type="radio" name="superheros" value="false"> Thor & Hulk
+</form>
+  <hr>
+  <form
+      action="create_user.html"
+      method="get"
+      enctype="application/x-www-form-urlencoded"
+    >
+ 
+        <label>Select your favourite video game</label>
+        <input type="checkbox" name="videogames" value="Fifa" checked="checked" > Fifa
+        <input type="checkbox" name="videogames" value="NHL" > NHL
+        <input type="checkbox" name="videogames" value="Residen Evil"> Residen Evil
+        <input type="checkbox" name="videogames" value="Uncharted" checked> Uncharted
+        <hr>
+        <input type="hidden" name="userid" value="2300" >
+</form>
+      <hr>
+      <form>
+      <label>email</label><input type="email" name="email" required/>
+      <br>
+      <a href="www.mysite.com">my site link</a>
+      <br>
+      <label>submit</label><input type="submit" value="Submit this form">
+    </form>
+    <form
+      action="create_user.html"
+      method="get"
+      enctype="application/x-www-form-urlencoded"
+    >
+      <input type="image" name ="login" src="img/register_button.png"  weight="30" height="30">
+    </form>
+    <form action="https://www.google.ca/search" method="get" enctype="application/x-www-form-urlencoded" >
+      <label>search</label><input type="search" name="query" />
+     <label>submit</label> <input type="submit" value="search">
+    </form>
+  </body>
+</html>
