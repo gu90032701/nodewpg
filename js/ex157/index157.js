@@ -247,10 +247,10 @@ let games = [
     }
   }
 ];
-const result1 = games.filter(function(value) {
+const result1 = games.filter(value => {
   return value.console == "PS4";
 });
-const result2 = games.filter(function(value) {
+const result2 = games.filter(value => {
   return value.console == "XBOX";
 });
 console.log("PS4 list:");
