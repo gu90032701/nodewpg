@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let result = 0;
+      let n = 0;
+      while (confirm("This program adds all the numbers you input")) {
+        let promt = prompt("plz enter a number ");
+        number = parseInt(promt);
+        result += number;
+        n++;
+        alert(`The result so far is: ${result}`);
+      }
+      alert(`The final result is: ${result}`);
+      alert(`The user input ${n} numbers`);
+      alert(`The average is: ${result / n}`);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //   startTime = new Date();
+      //   alert("open this site");
+      //   endTime = new Date();
+      //   timeDiff = (endTime - startTime) / 1000;
+      //   console.log(timeDiff);
+      alert("welcome to the site");
+      startTime = new Date();
+      const timer = function() {
+        console.log("seconds");
+      };
+      const id = setInterval(timer, 1000);
+      if (confirm("stop?")) {
+        endTime = new Date();
+        timeDiff = Math.ceil((endTime - startTime) / 1000);
+        clearInterval(id);
+        console.log(`u have been here for ${timeDiff}s`);
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let timeLimitString = prompt("enter time you want to stay(s)");
+      timeLimit = parseInt(timeLimitString);
+      const timer = function() {
+        // console.log(timeLimit);
+        timeLimit--;
+        console.log(`u have ${timeLimit}s left`);
+        if (timeLimit <= 0) {
+          alert("Your session has expired, come again soon!");
+          clearInterval(id);
+        }
+      };
+
+      var id = setInterval(timer, 1000);
+
+      //   console.log(timeLimit);
+    </script>
+  </body>
+</html>
