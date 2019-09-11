@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Events</title>
+  </head>
+  <body>
+    <div></div>
+    <button id="firstButton">Click Me!!</button>
+    <button id="secondButton">Remove event listener</button>
+    <a href="https://google.com">Link with JavaScript handler</a>
+    <script>
+      const aElement = document.querySelector("a");
+      let counter = 0;
+      onMouseOver = function() {
+        counter++;
+        switch (counter) {
+          case 1:
+            aElement.style.backgroundColor = "red";
+            break;
+          case 2:
+            aElement.style.backgroundColor = "blue";
+            break;
+          case 3:
+            aElement.style.backgroundColor = "green";
+            break;
+          case 4:
+            aElement.style.backgroundColor = "gray";
+            break;
+          default:
+            aElement.style.backgroundColor = "white";
+        }
+      };
+      onMouseOut = function() {
+        alert(aElement.style.backgroundColor);
+      };
+      aElement.onmouseover = onMouseOver;
+      aElement.onmouseout = onMouseOut;
+    </script>
+  </body>
+</html>

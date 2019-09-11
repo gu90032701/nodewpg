@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Form elements event</title>
+    </head>
+    <body>
+        <form
+            action="save_user.html"
+            method="post"
+            enctype="application/x-www-form-urlencoded"
+            name="login"
+        >
+            <input type="text" id="username" name="username" />
+            <input type="password" id="pass" name="pass" />
+            <input type="submit" name="submit" value="Send" />
+        </form>
+        <script>
+            const form = document.querySelector("form");
+            const formElement = form.elements;
+            form.addEventListener("submit", function(event) {
+                event.preventDefault();
+            });
+
+            for (i = 0; i < formElement.length; i++) {
+                let number = i;
+                formElement[i].onfocus = () => {
+                    formElement[number].style.boxShadow =
+                        "2px 3px 10px -1px rgba(0,0,0,0.8)";
+                    // console.log(number + 1);
+                };
+                formElement[i].onblur = () => {
+                    formElement[number].style.boxShadow = "";
+                    // console.log(number + 1);
+                };
+            }
+            let userName = formElement[0];
+            let pass = formElement[1];
+            let send = formElement[2];
+            send.addEventListener("click", function() {
+                alert(`usernmae:${userName.value},password:${pass.value}`);
+            });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Events</title>
+    <style>
+      .striked {
+        text-decoration: aqua;
+      }
+      li {
+        text-decoration-line: line-through;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      const ul = document.createElement("ul");
+      const body = document.querySelector("body");
+      let weeklyChores = [
+        "c1",
+        "c2",
+        "c3",
+        "c4",
+        "c5",
+        "c6",
+        "c7",
+        "c8",
+        "c9",
+        "c10"
+      ];
+      weeklyChores.map(n => {
+        let list = document.createElement("li");
+        list.innerText = n;
+        list.addEventListener("click", function() {
+          list.classList.toggle("striked");
+        });
+        ul.appendChild(list);
+      });
+      console.log(body);
+      body.appendChild(ul);
+    </script>
+  </body>
+</html>

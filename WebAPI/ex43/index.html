@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Form Properties</title>
+  </head>
+  <body>
+    <form
+      action="save_user.html"
+      method="post"
+      enctype="application/x-www-form-urlencoded"
+      name="login"
+    >
+      <input type="text" id="username" name="username" />
+      <input type="password" id="pass" name="pass" />
+      <input type="submit" name="submit" value="Send" />
+    </form>
+    <div></div>
+    <script>
+      const bodyElement = document.querySelector("body");
+      const form = document.querySelector("form");
+      //   const formElements = form.elements;
+      let action = form.attributes[0].value;
+      let method = form.attributes[1].value;
+      let encoding = form.attributes[2].value;
+      let name = form.attributes[3].value;
+      let formElements = [action, method, encoding, name];
+      console.log(formElements);
+      formElements.map(n => {
+        const divElement = document.createElement("div");
+        divElement.innerText = n;
+        bodyElement.appendChild(divElement);
+        console.log(divElement);
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>It's all JavaScript Baby!!</title>
+  </head>
+  <body>
+    <script>
+      const bodyElement = document.querySelector("body");
+      const name = [
+        "n1",
+        "n2",
+        "n3",
+        "n4",
+        "n5",
+        "n6",
+        "n7",
+        "n8",
+        "n9",
+        "n10"
+      ];
+      const ul = document.createElement("ul");
+
+      const nameList = name.map(n => {
+        let li = document.createElement("li");
+        li.innerText = n;
+        ul.appendChild(li);
+      });
+      document.body.appendChild(ul);
+    </script>
+  </body>
+</html>

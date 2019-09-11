@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Events</title>
+  </head>
+  <body>
+    <div></div>
+    <button id="firstButton">Click Me!!</button>
+    <button id="secondButton">Remove event listener</button>
+    <a href="https://google.com">Link with JavaScript handler</a>
+    <script>
+      const firstButton = document.getElementById("firstButton");
+      let counter = 0;
+      const divElement = document.querySelector("div");
+      onDoubleClick = function() {
+        counter++;
+        divElement.innerText = counter;
+      };
+      firstButton.ondblclick = onDoubleClick;
+    </script>
+  </body>
+</html>

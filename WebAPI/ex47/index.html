@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Form Checkbox</title>
+  </head>
+  <body>
+    <form
+      action="save_user.html"
+      method="post"
+      enctype="application/x-www-form-urlencoded"
+      name="login"
+    >
+      <input
+        type="checkbox"
+        name="superheroe"
+        value="Wolverine"
+        id="checkbox"
+      />
+      Wolverine
+      <input type="checkbox" name="superheroe" value="The Invisible Woman" />
+      The Invisible Woman
+      <input type="checkbox" name="superheroe" value="Iron Man" /> Iron Man
+      <input type="checkbox" name="superheroe" value="Superman" /> Superman
+      <input type="checkbox" name="superheroe" value="Daredevil" /> Daredevil
+      <input type="checkbox" name="superheroe" value="The Flash" /> The Flash
+      <input type="checkbox" name="superheroe" value="Captain America" />
+      Captain America
+      <input type="checkbox" name="superheroe" value="Wonder Woman" /> Wonder
+      Woman
+      <input type="checkbox" name="superheroe" value="Spider-Man" /> Spider-Man
+      <input type="checkbox" name="superheroe" value="Batman" /> Batman
+      <input type="submit" name="submit" value="Submit" />
+    </form>
+    <script>
+      const form = document.querySelector("form");
+
+      send = document.getElementsByName("submit")[0];
+
+      //   send = form.elements[length - 1];
+      form.addEventListener("submit", function(event) {
+        event.preventDefault();
+      });
+
+      send.addEventListener("click", function() {
+        let counter = 0;
+        const checkboxes = document.getElementsByName("superheroe");
+        let array = [];
+        for (i = 0; i < checkboxes.length; i++) {
+          if (checkboxes[i].checked) {
+            counter++;
+            array[i] = checkboxes[i];
+          }
+        }
+        if (counter == 0) {
+          alert("Please at least select a superheroe");
+        }
+        // const property = Object.keys(array);
+        const length = array.length;
+        // console.log(array.length);
+        if (counter == 1) {
+          alert(`The best superheroe is:${array[length - 1].value}`);
+        }
+        // console.log(array);
+        if (counter > 1) {
+          let string = "";
+          for (i = 0; i < length; i++) {
+            if (array[i]) {
+              string += "[" + array[i].value + "]";
+            }
+          }
+          alert(`The best superheores are: ${string}`);
+        }
+      });
+    </script>
+  </body>
+</html>
