@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            const apiURL = "https://api.tvmaze.com/search/shows?q=batman";
+
+            const JSONfile = fetch(apiURL)
+                .then(function(response) {
+                    return response.json();
+                })
+                .then(function(data) {
+                    const show = data[0];
+                    console.log(show.show.name); // Batman
+                    console.log(show.show.premiered); // 1966-01-12
+                    console.log(show.show.image.original);
+                });
+        </script>
+    </body>
+</html>
